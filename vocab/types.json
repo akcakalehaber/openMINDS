@@ -19,7 +19,12 @@
         "name": "Biological sex",
         "translatableTo": null
     },
+    "https://openminds.ebrains.eu/controlledTerms/CellType": {
+        "description": null,
+        "name": "Cell type"
+    },
     "https://openminds.ebrains.eu/controlledTerms/Confidence": {
+        "deprecated": true,
         "description": "Structured information on the confidence (semantic term) of a measurement or assumption.",
         "name": "Confidence",
         "translatableTo": null
@@ -78,6 +83,10 @@
         "name": "Laterality",
         "translatableTo": null
     },
+    "https://openminds.ebrains.eu/controlledTerms/MetaDataModelType": {
+        "description": null,
+        "name": "Meta data model type"
+    },
     "https://openminds.ebrains.eu/controlledTerms/Modality": {
         "description": "Structured information on the modality.",
         "name": "Modality",
@@ -103,12 +112,18 @@
         "name": "Operating system",
         "translatableTo": null
     },
+    "https://openminds.ebrains.eu/controlledTerms/Organ": {
+        "description": null,
+        "name": "Organ"
+    },
     "https://openminds.ebrains.eu/controlledTerms/OrganOfOrigin": {
+        "deprecated": true,
         "description": "Structured information on the organ of origin.",
         "name": "Organ of origin",
         "translatableTo": null
     },
     "https://openminds.ebrains.eu/controlledTerms/Pathology": {
+        "deprecated": true,
         "description": "Structured information on the general pathology of a tissue sample.",
         "name": "Pathology",
         "translatableTo": null
@@ -118,7 +133,12 @@
         "name": "Phenotype",
         "translatableTo": null
     },
+    "https://openminds.ebrains.eu/controlledTerms/PreparationType": {
+        "description": null,
+        "name": "Preparation type"
+    },
     "https://openminds.ebrains.eu/controlledTerms/ProductAvailability": {
+        "deprecated": true,
         "description": "Structured information on the product availibility (accessibility of data).",
         "name": "Product availability",
         "translatableTo": null
@@ -128,12 +148,18 @@
         "name": "Programming language",
         "translatableTo": null
     },
+    "https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap": {
+        "description": null,
+        "name": "Qualitative overlap"
+    },
     "https://openminds.ebrains.eu/controlledTerms/RepositoryHost": {
+        "deprecated": true,
         "description": "Structured information on the repository host.",
         "name": "Repository host",
         "translatableTo": null
     },
     "https://openminds.ebrains.eu/controlledTerms/SemanticRelation": {
+        "deprecated": true,
         "description": "Structured information on the semantic relation between two geometric entities.",
         "name": "Semantic relation",
         "translatableTo": null
@@ -152,6 +178,10 @@
         "description": "Structured information on the species.",
         "name": "Species",
         "translatableTo": null
+    },
+    "https://openminds.ebrains.eu/controlledTerms/Strain": {
+        "description": null,
+        "name": "Strain"
     },
     "https://openminds.ebrains.eu/controlledTerms/StudyTargetType": {
         "description": "Structured information on the general type of the study target.",
@@ -176,6 +206,10 @@
         "description": "Structured information on the unit of measurement.",
         "name": "Unit of measurement",
         "translatableTo": null
+    },
+    "https://openminds.ebrains.eu/controlledTerms/productAccessibility": {
+        "description": null,
+        "name": "Product accessibility"
     },
     "https://openminds.ebrains.eu/core/ContentType": {
         "description": "Structured information on the content type of a file instance, bundle or repository.",

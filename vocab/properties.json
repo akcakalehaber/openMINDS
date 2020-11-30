@@ -4,7 +4,10 @@
         "name": "IRI",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/digitalIdentifierSchema"
+            "core/schemas/data/fileBundle",
+            "core/schemas/data/fileInstance",
+            "core/schemas/data/fileRepository",
+            "core/schemas/miscellaneous/digitalIdentifierSchema"
         ]
     },
     "abstractionLevel": {
@@ -15,7 +18,7 @@
         "name": "Abstraction level",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/modelVersion"
+            "core/schemas/products/modelVersion"
         ]
     },
     "accessibility": {
@@ -25,10 +28,10 @@
         ],
         "name": "Accessibility",
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "acknowledgement": {
@@ -36,17 +39,17 @@
         "name": "Acknowledgement",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/funding"
+            "core/schemas/miscellaneous/funding"
         ]
     },
     "additionalRemarks": {
         "description": null,
         "name": "Additional remarks",
         "schemas": [
-            "core/v3/research/subjectGroupState",
-            "core/v3/research/subjectState",
-            "core/v3/research/tissueSampleCollectionState",
-            "core/v3/research/tissueSampleState"
+            "core/schemas/research/subjectGroupState",
+            "core/schemas/research/subjectState",
+            "core/schemas/research/tissueSampleCollectionState",
+            "core/schemas/research/tissueSampleState"
         ]
     },
     "age": {
@@ -54,10 +57,10 @@
         "name": "Age",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subjectGroupState",
-            "core/v3/research/subjectState",
-            "core/v3/research/tissueSampleCollectionState",
-            "core/v3/research/tissueSampleState"
+            "core/schemas/research/subjectGroupState",
+            "core/schemas/research/subjectState",
+            "core/schemas/research/tissueSampleCollectionState",
+            "core/schemas/research/tissueSampleState"
         ]
     },
     "ageCategory": {
@@ -68,8 +71,8 @@
         "name": "Age category",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subjectGroupState",
-            "core/v3/research/subjectState"
+            "core/schemas/research/subjectGroupState",
+            "core/schemas/research/subjectState"
         ]
     },
     "algorithm": {
@@ -77,7 +80,7 @@
         "name": "Algorithm",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/hash"
+            "core/schemas/data/hash"
         ]
     },
     "alternativeVersionOf": {
@@ -95,18 +98,24 @@
         "name": "Anatomical axes orientation",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/coordinateSpace"
+            "SANDS/schemas/coordinateSpace"
         ]
     },
     "anatomicalEntities": {
+        "deprecated": true,
+        "description": null,
+        "name": "Anatomical entities",
+        "sameAs": null,
+        "schemas": []
+    },
+    "anatomicalEntity": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/sands/AnatomicalEntity"
         ],
-        "name": "Anatomical entities",
-        "sameAs": null,
+        "name": "Anatomical entity",
         "schemas": [
-            "SANDS/v1/atlasTerminology"
+            "SANDS/schemas/atlasTerminology"
         ]
     },
     "annotationSet": {
@@ -117,7 +126,7 @@
         "name": "Annotation set",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/brainAtlasVersion"
+            "SANDS/schemas/brainAtlasVersion"
         ]
     },
     "applicationCategory": {
@@ -128,7 +137,7 @@
         "name": "Application category",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
         ]
     },
     "associatedFileExtension": {
@@ -136,30 +145,36 @@
         "name": "Associated file extension",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/contentType"
+            "core/schemas/data/contentType"
         ]
     },
-    "authors": {
+    "author": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/Organization",
             "https://openminds.ebrains.eu/core/Person"
         ],
+        "name": "Author",
+        "schemas": [
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
+        ]
+    },
+    "authors": {
+        "deprecated": true,
+        "description": null,
         "name": "Authors",
         "sameAs": null,
-        "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
-        ]
+        "schemas": []
     },
     "awardNumber": {
         "description": null,
         "name": "Award number",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/funding"
+            "core/schemas/miscellaneous/funding"
         ]
     },
     "awardTitle": {
@@ -167,19 +182,35 @@
         "name": "Award title",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/funding"
+            "core/schemas/miscellaneous/funding"
         ]
     },
-    "behavioralTasks": {
+    "axesOrigin": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/core/QuantitativeValue"
+        ],
+        "name": "Axes origin",
+        "schemas": [
+            "SANDS/schemas/coordinateSpace"
+        ]
+    },
+    "behavioralTask": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/controlledTerms/BehavioralTask"
         ],
+        "name": "Behavioral task",
+        "schemas": [
+            "core/schemas/research/protocol"
+        ]
+    },
+    "behavioralTasks": {
+        "deprecated": true,
+        "description": null,
         "name": "Behavioral tasks",
         "sameAs": null,
-        "schemas": [
-            "core/v3/research/protocol"
-        ]
+        "schemas": []
     },
     "bestViewPoint": {
         "description": null,
@@ -189,7 +220,7 @@
         "name": "Best view point",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/annotation"
+            "SANDS/schemas/annotation"
         ]
     },
     "biologicalSex": {
@@ -200,10 +231,10 @@
         "name": "Biological sex",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subject",
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/subject",
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "category": {
@@ -214,27 +245,23 @@
         "name": "Category",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/contentType",
-            "core/v3/products/softwareFeature"
+            "core/schemas/data/contentType",
+            "core/schemas/products/softwareFeature"
         ]
     },
     "contactPoint": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/sands/CoordinatePoint"
-        ],
         "name": "Contact point",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/electrodeContact"
-        ]
+        "schemas": []
     },
     "content": {
         "description": null,
         "name": "Content",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/fileInstance"
+            "core/schemas/data/fileInstance"
         ]
     },
     "contentType": {
@@ -252,7 +279,7 @@
         "name": "Contribution type",
         "sameAs": null,
         "schemas": [
-            "core/v3/actors/contribution"
+            "core/schemas/actors/contribution"
         ]
     },
     "contributor": {
@@ -264,43 +291,49 @@
         "name": "Contributor",
         "sameAs": null,
         "schemas": [
-            "core/v3/actors/contribution"
+            "core/schemas/actors/contribution"
+        ]
+    },
+    "coordinatePoint": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/sands/CoordinatePoint"
+        ],
+        "name": "Coordinate point",
+        "schemas": [
+            "SANDS/schemas/electrodeContact"
         ]
     },
     "coordinateSpace": {
         "description": null,
         "linkedTypes": [
-            "https://openminds.ebrains.eu/core/CoordinateSpace",
             "https://openminds.ebrains.eu/sands/CoordinateSpace"
         ],
         "name": "Coordinate space",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/brainAtlasVersion",
-            "SANDS/v1/coordinatePoint",
-            "SANDS/v1/image"
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinatePoint",
+            "SANDS/schemas/image"
         ]
     },
     "coordinates": {
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/QuantitativeValue"
-        ],
         "name": "Coordinates",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/coordinatePoint"
+            "SANDS/schemas/coordinatePoint"
         ]
     },
     "copyright": {
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/Copyright"
-        ],
         "name": "Copyright",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "criteria": {
@@ -311,8 +344,8 @@
         "name": "Criteria",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/anatomicalEntityRelation",
-            "SANDS/v1/annotation"
+            "SANDS/schemas/anatomicalEntityRelation",
+            "SANDS/schemas/annotation"
         ]
     },
     "criteriaQualityType": {
@@ -323,35 +356,54 @@
         "name": "Criteria quality type",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/anatomicalEntityRelation",
-            "SANDS/v1/annotation"
+            "SANDS/schemas/anatomicalEntityRelation",
+            "SANDS/schemas/annotation"
         ]
     },
-    "custodians": {
+    "custodian": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/Organization",
             "https://openminds.ebrains.eu/core/Person"
         ],
-        "name": "Custodians",
-        "sameAs": null,
+        "name": "Custodian",
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
-    "defaultImages": {
+    "custodians": {
+        "deprecated": true,
+        "description": null,
+        "name": "Custodians",
+        "sameAs": null,
+        "schemas": []
+    },
+    "deed": {
+        "description": null,
+        "name": "Deed",
+        "schemas": [
+            "core/schemas/data/license"
+        ]
+    },
+    "defaultImage": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/sands/Image"
         ],
+        "name": "Default image",
+        "schemas": [
+            "SANDS/schemas/coordinateSpace"
+        ]
+    },
+    "defaultImages": {
+        "deprecated": true,
+        "description": null,
         "name": "Default images",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/coordinateSpace"
-        ]
+        "schemas": []
     },
     "definedIn": {
         "description": null,
@@ -361,9 +413,9 @@
         "name": "Defined in",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/atlasTerminology",
-            "SANDS/v1/electrodeContact",
-            "SANDS/v1/image"
+            "SANDS/schemas/atlasTerminology",
+            "SANDS/schemas/electrodeContact",
+            "SANDS/schemas/image"
         ]
     },
     "definition": {
@@ -371,49 +423,50 @@
         "name": "Definition",
         "sameAs": null,
         "schemas": [
-            "controlledTerms/v1.0/ageCategory",
-            "controlledTerms/v1.0/anatomicalAxesOrientation",
-            "controlledTerms/v1.0/behavioralTask",
-            "controlledTerms/v1.0/biologicalSex",
-            "controlledTerms/v1.0/confidence",
-            "controlledTerms/v1.0/contributionType",
-            "controlledTerms/v1.0/criteriaQualityType",
-            "controlledTerms/v1.0/datasetType",
-            "controlledTerms/v1.0/disease",
-            "controlledTerms/v1.0/diseaseModel",
-            "controlledTerms/v1.0/ethicsAssessment",
-            "controlledTerms/v1.0/fileBundleGrouping",
-            "controlledTerms/v1.0/fileUsageRole",
-            "controlledTerms/v1.0/genotype",
-            "controlledTerms/v1.0/language",
-            "controlledTerms/v1.0/laterality",
-            "controlledTerms/v1.0/modality",
-            "controlledTerms/v1.0/modelAbstractionLevel",
-            "controlledTerms/v1.0/modelScope",
-            "controlledTerms/v1.0/operatingDevice",
-            "controlledTerms/v1.0/operatingSystem",
-            "controlledTerms/v1.0/organOfOrigin",
-            "controlledTerms/v1.0/pathology",
-            "controlledTerms/v1.0/phenotype",
-            "controlledTerms/v1.0/productAvailability",
-            "controlledTerms/v1.0/programmingLanguage",
-            "controlledTerms/v1.0/repositoryHost",
-            "controlledTerms/v1.0/semanticRelation",
-            "controlledTerms/v1.0/softwareApplicationCategory",
-            "controlledTerms/v1.0/softwareFeatureCategory",
-            "controlledTerms/v1.0/species",
-            "controlledTerms/v1.0/technique",
-            "controlledTerms/v1.0/termSuggestion",
-            "controlledTerms/v1.0/terminology",
-            "controlledTerms/v1.0/tissueSampleType",
-            "controlledTerms/v1.0/unitOfMeasurement"
+            "controlledTerms/schemas/ageCategory",
+            "controlledTerms/schemas/anatomicalAxesOrientation",
+            "controlledTerms/schemas/behavioralTask",
+            "controlledTerms/schemas/biologicalSex",
+            "controlledTerms/schemas/cellType",
+            "controlledTerms/schemas/contributionType",
+            "controlledTerms/schemas/criteriaQualityType",
+            "controlledTerms/schemas/datasetType",
+            "controlledTerms/schemas/disease",
+            "controlledTerms/schemas/diseaseModel",
+            "controlledTerms/schemas/ethicsAssessment",
+            "controlledTerms/schemas/fileBundleGrouping",
+            "controlledTerms/schemas/fileUsageRole",
+            "controlledTerms/schemas/genotype",
+            "controlledTerms/schemas/language",
+            "controlledTerms/schemas/laterality",
+            "controlledTerms/schemas/metaDataModelType",
+            "controlledTerms/schemas/modality",
+            "controlledTerms/schemas/modelAbstractionLevel",
+            "controlledTerms/schemas/modelScope",
+            "controlledTerms/schemas/operatingDevice",
+            "controlledTerms/schemas/operatingSystem",
+            "controlledTerms/schemas/organ",
+            "controlledTerms/schemas/phenotype",
+            "controlledTerms/schemas/preparationType",
+            "controlledTerms/schemas/productAccessibility",
+            "controlledTerms/schemas/programmingLanguage",
+            "controlledTerms/schemas/qualitativeOverlap",
+            "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeatureCategory",
+            "controlledTerms/schemas/species",
+            "controlledTerms/schemas/strain",
+            "controlledTerms/schemas/technique",
+            "controlledTerms/schemas/termSuggestion",
+            "controlledTerms/schemas/terminology",
+            "controlledTerms/schemas/tissueSampleType",
+            "controlledTerms/schemas/unitOfMeasurement"
         ]
     },
     "definitionReference": {
         "description": null,
         "name": "Definition reference",
         "schemas": [
-            "core/v3/products/softwareFeature"
+            "core/schemas/products/softwareFeature"
         ]
     },
     "description": {
@@ -421,71 +474,79 @@
         "name": "Description",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/brainAtlas",
-            "controlledTerms/v1.0/ageCategory",
-            "controlledTerms/v1.0/anatomicalAxesOrientation",
-            "controlledTerms/v1.0/behavioralTask",
-            "controlledTerms/v1.0/biologicalSex",
-            "controlledTerms/v1.0/confidence",
-            "controlledTerms/v1.0/contributionType",
-            "controlledTerms/v1.0/criteriaQualityType",
-            "controlledTerms/v1.0/datasetType",
-            "controlledTerms/v1.0/disease",
-            "controlledTerms/v1.0/diseaseModel",
-            "controlledTerms/v1.0/ethicsAssessment",
-            "controlledTerms/v1.0/fileBundleGrouping",
-            "controlledTerms/v1.0/fileUsageRole",
-            "controlledTerms/v1.0/genotype",
-            "controlledTerms/v1.0/language",
-            "controlledTerms/v1.0/laterality",
-            "controlledTerms/v1.0/modality",
-            "controlledTerms/v1.0/modelAbstractionLevel",
-            "controlledTerms/v1.0/modelScope",
-            "controlledTerms/v1.0/operatingDevice",
-            "controlledTerms/v1.0/operatingSystem",
-            "controlledTerms/v1.0/organOfOrigin",
-            "controlledTerms/v1.0/pathology",
-            "controlledTerms/v1.0/phenotype",
-            "controlledTerms/v1.0/productAvailability",
-            "controlledTerms/v1.0/programmingLanguage",
-            "controlledTerms/v1.0/repositoryHost",
-            "controlledTerms/v1.0/semanticRelation",
-            "controlledTerms/v1.0/softwareApplicationCategory",
-            "controlledTerms/v1.0/softwareFeatureCategory",
-            "controlledTerms/v1.0/species",
-            "controlledTerms/v1.0/technique",
-            "controlledTerms/v1.0/termSuggestion",
-            "controlledTerms/v1.0/terminology",
-            "controlledTerms/v1.0/tissueSampleType",
-            "controlledTerms/v1.0/unitOfMeasurement",
-            "core/v3/products/dataset",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModel",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/model",
-            "core/v3/products/modelVersion",
-            "core/v3/products/project",
-            "core/v3/products/software",
-            "core/v3/products/softwareFeature",
-            "core/v3/products/softwareVersion",
-            "core/v3/research/parameterSetting",
-            "core/v3/research/protocol"
+            "SANDS/schemas/brainAtlas",
+            "controlledTerms/schemas/ageCategory",
+            "controlledTerms/schemas/anatomicalAxesOrientation",
+            "controlledTerms/schemas/behavioralTask",
+            "controlledTerms/schemas/biologicalSex",
+            "controlledTerms/schemas/cellType",
+            "controlledTerms/schemas/contributionType",
+            "controlledTerms/schemas/criteriaQualityType",
+            "controlledTerms/schemas/datasetType",
+            "controlledTerms/schemas/disease",
+            "controlledTerms/schemas/diseaseModel",
+            "controlledTerms/schemas/ethicsAssessment",
+            "controlledTerms/schemas/fileBundleGrouping",
+            "controlledTerms/schemas/fileUsageRole",
+            "controlledTerms/schemas/genotype",
+            "controlledTerms/schemas/language",
+            "controlledTerms/schemas/laterality",
+            "controlledTerms/schemas/metaDataModelType",
+            "controlledTerms/schemas/modality",
+            "controlledTerms/schemas/modelAbstractionLevel",
+            "controlledTerms/schemas/modelScope",
+            "controlledTerms/schemas/operatingDevice",
+            "controlledTerms/schemas/operatingSystem",
+            "controlledTerms/schemas/organ",
+            "controlledTerms/schemas/phenotype",
+            "controlledTerms/schemas/preparationType",
+            "controlledTerms/schemas/productAccessibility",
+            "controlledTerms/schemas/programmingLanguage",
+            "controlledTerms/schemas/qualitativeOverlap",
+            "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeatureCategory",
+            "controlledTerms/schemas/species",
+            "controlledTerms/schemas/strain",
+            "controlledTerms/schemas/technique",
+            "controlledTerms/schemas/termSuggestion",
+            "controlledTerms/schemas/terminology",
+            "controlledTerms/schemas/tissueSampleType",
+            "controlledTerms/schemas/unitOfMeasurement",
+            "core/schemas/products/dataset",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModel",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/model",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/project",
+            "core/schemas/products/software",
+            "core/schemas/products/softwareFeature",
+            "core/schemas/products/softwareVersion",
+            "core/schemas/research/parameterSetting",
+            "core/schemas/research/protocol",
+            "core/schemas/research/protocolExecution"
         ]
     },
-    "developers": {
+    "developer": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/Organization",
             "https://openminds.ebrains.eu/core/Person"
         ],
+        "name": "Developer",
+        "schemas": [
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
+        ]
+    },
+    "developers": {
+        "deprecated": true,
+        "description": null,
         "name": "Developers",
         "sameAs": null,
-        "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
-        ]
+        "schemas": []
     },
     "device": {
         "description": null,
@@ -495,7 +556,7 @@
         "name": "Device",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
         ]
     },
     "digest": {
@@ -503,7 +564,7 @@
         "name": "Digest",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/hash"
+            "core/schemas/data/hash"
         ]
     },
     "digitalIdentifier": {
@@ -514,44 +575,51 @@
         "name": "Digital identifier",
         "sameAs": null,
         "schemas": [
-            "core/v3/actors/organization",
-            "core/v3/actors/person",
-            "core/v3/products/dataset",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModel",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/model",
-            "core/v3/products/modelVersion",
-            "core/v3/products/software",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinateSpace",
+            "core/schemas/actors/organization",
+            "core/schemas/actors/person",
+            "core/schemas/products/dataset",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModel",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/model",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/software",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "disclaimer": {
+        "deprecated": true,
         "description": null,
         "name": "Disclaimer",
         "sameAs": null,
-        "schemas": [
-            "core/v3/data/license"
-        ]
+        "schemas": []
     },
     "displayColor": {
         "description": null,
         "name": "Display color",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/annotation"
+            "SANDS/schemas/annotation"
         ]
     },
-    "electrodeContacts": {
+    "electrodeContact": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/sands/ElectrodeContact"
         ],
+        "name": "Electrode contact",
+        "schemas": [
+            "SANDS/schemas/electrode"
+        ]
+    },
+    "electrodeContacts": {
+        "deprecated": true,
+        "description": null,
         "name": "Electrode contacts",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/electrode"
-        ]
+        "schemas": []
     },
     "electrodes": {
         "description": null,
@@ -561,7 +629,7 @@
         "name": "Electrodes",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/electrodeArray"
+            "SANDS/schemas/electrodeArray"
         ]
     },
     "email": {
@@ -569,7 +637,7 @@
         "name": "Email",
         "sameAs": null,
         "schemas": [
-            "core/v3/actors/person"
+            "core/schemas/actors/person"
         ]
     },
     "ethicsAssessment": {
@@ -580,7 +648,7 @@
         "name": "Ethics assessment",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/datasetVersion"
+            "core/schemas/products/datasetVersion"
         ]
     },
     "familyName": {
@@ -588,7 +656,7 @@
         "name": "Family name",
         "sameAs": null,
         "schemas": [
-            "core/v3/actors/person"
+            "core/schemas/actors/person"
         ]
     },
     "format": {
@@ -598,10 +666,10 @@
         ],
         "name": "Format",
         "schemas": [
-            "core/v3/data/fileBundle",
-            "core/v3/data/fileInstance",
-            "core/v3/data/fileRepository",
-            "core/v3/products/modelVersion"
+            "core/schemas/data/fileBundle",
+            "core/schemas/data/fileInstance",
+            "core/schemas/data/fileRepository",
+            "core/schemas/products/modelVersion"
         ]
     },
     "fullDocumentation": {
@@ -611,10 +679,10 @@
         ],
         "name": "Full documentation",
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "fullName": {
@@ -622,21 +690,21 @@
         "name": "Full name",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/atlasTerminology",
-            "SANDS/v1/brainAtlas",
-            "SANDS/v1/brainAtlasVersion",
-            "SANDS/v1/coordinateSpace",
-            "core/v3/actors/organization",
-            "core/v3/data/license",
-            "core/v3/products/dataset",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModel",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/model",
-            "core/v3/products/modelVersion",
-            "core/v3/products/project",
-            "core/v3/products/software",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/atlasTerminology",
+            "SANDS/schemas/brainAtlas",
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinateSpace",
+            "core/schemas/actors/organization",
+            "core/schemas/data/license",
+            "core/schemas/products/dataset",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModel",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/model",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/project",
+            "core/schemas/products/software",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "funder": {
@@ -647,7 +715,7 @@
         "name": "Funder",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/funding"
+            "core/schemas/miscellaneous/funding"
         ]
     },
     "funding": {
@@ -658,10 +726,10 @@
         "name": "Funding",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "genotype": {
@@ -672,10 +740,10 @@
         "name": "Genotype",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subject",
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/subject",
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "givenName": {
@@ -683,7 +751,7 @@
         "name": "Given name",
         "sameAs": null,
         "schemas": [
-            "core/v3/actors/person"
+            "core/schemas/actors/person"
         ]
     },
     "groupedBy": {
@@ -694,7 +762,7 @@
         "name": "Grouped by",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/fileBundle"
+            "core/schemas/data/fileBundle"
         ]
     },
     "handedness": {
@@ -704,33 +772,60 @@
         ],
         "name": "Handedness",
         "schemas": [
-            "core/v3/research/subjectGroupState",
-            "core/v3/research/subjectState"
+            "core/schemas/research/subjectGroupState",
+            "core/schemas/research/subjectState"
         ]
     },
     "hasAlternativeVersion": {
         "description": null,
         "linkedTypes": [
+            "https://openminds.ebrains.eu/core/DatasetVersion",
+            "https://openminds.ebrains.eu/core/ModelVersion",
+            "https://openminds.ebrains.eu/core/SoftwareVersion",
             "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
         ],
         "name": "Has alternative version",
         "schemas": [
-            "SANDS/v1/brainAtlasVersion"
+            "SANDS/schemas/brainAtlasVersion",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "hasAlternativeVersions": {
+        "deprecated": true,
+        "description": null,
+        "name": "Has alternative versions",
+        "schemas": []
+    },
+    "hasFeature": {
         "description": null,
         "linkedTypes": [
-            "https://openminds.ebrains.eu/core/DatasetVersion",
-            "https://openminds.ebrains.eu/core/ModelVersion",
-            "https://openminds.ebrains.eu/core/SoftwareVersion"
+            "https://openminds.ebrains.eu/core/SoftwareFeature"
         ],
-        "name": "Has alternative versions",
+        "name": "Has feature",
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
+        ]
+    },
+    "hasParent": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/core/Organization",
+            "https://openminds.ebrains.eu/sands/AnatomicalEntity"
+        ],
+        "name": "Has parent",
+        "schemas": [
+            "SANDS/schemas/anatomicalEntity",
+            "core/schemas/actors/organization"
+        ]
+    },
+    "hasRequirement": {
+        "description": null,
+        "name": "Has requirement",
+        "schemas": [
+            "core/schemas/products/softwareVersion"
         ]
     },
     "hasResearchProducts": {
@@ -738,6 +833,8 @@
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/Dataset",
             "https://openminds.ebrains.eu/core/DatasetVersion",
+            "https://openminds.ebrains.eu/core/MetaDataModel",
+            "https://openminds.ebrains.eu/core/MetaDataModelVersion",
             "https://openminds.ebrains.eu/core/Model",
             "https://openminds.ebrains.eu/core/ModelVersion",
             "https://openminds.ebrains.eu/core/Software",
@@ -746,25 +843,31 @@
         "name": "Has research products",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/project"
+            "core/schemas/products/project"
         ]
     },
-    "hasSupplementVersions": {
+    "hasSupplementVersion": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/DatasetVersion",
             "https://openminds.ebrains.eu/core/ModelVersion",
             "https://openminds.ebrains.eu/core/SoftwareVersion"
         ],
-        "name": "Has supplement versions",
+        "name": "Has supplement version",
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
-    "hasVersions": {
+    "hasSupplementVersions": {
+        "deprecated": true,
+        "description": null,
+        "name": "Has supplement versions",
+        "schemas": []
+    },
+    "hasVersion": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/DatasetVersion",
@@ -773,15 +876,21 @@
             "https://openminds.ebrains.eu/core/SoftwareVersion",
             "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
         ],
+        "name": "Has version",
+        "schemas": [
+            "SANDS/schemas/brainAtlas",
+            "core/schemas/products/dataset",
+            "core/schemas/products/metaDataModel",
+            "core/schemas/products/model",
+            "core/schemas/products/software"
+        ]
+    },
+    "hasVersions": {
+        "deprecated": true,
+        "description": null,
         "name": "Has versions",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/brainAtlas",
-            "core/v3/products/dataset",
-            "core/v3/products/metaDataModel",
-            "core/v3/products/model",
-            "core/v3/products/software"
-        ]
+        "schemas": []
     },
     "hash": {
         "description": null,
@@ -791,9 +900,9 @@
         "name": "Hash",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/fileBundle",
-            "core/v3/data/fileInstance",
-            "core/v3/data/fileRepository"
+            "core/schemas/data/fileBundle",
+            "core/schemas/data/fileInstance",
+            "core/schemas/data/fileRepository"
         ]
     },
     "holder": {
@@ -805,7 +914,7 @@
         "name": "Holder",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/copyright"
+            "core/schemas/data/copyright"
         ]
     },
     "homepage": {
@@ -813,27 +922,30 @@
         "name": "Homepage",
         "sameAs": null,
         "schemas": [
-            "core/v3/actors/organization",
-            "core/v3/products/dataset",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModel",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/model",
-            "core/v3/products/modelVersion",
-            "core/v3/products/project",
-            "core/v3/products/software",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/brainAtlas",
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinateSpace",
+            "core/schemas/actors/organization",
+            "core/schemas/products/dataset",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModel",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/model",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/project",
+            "core/schemas/products/software",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "hostedBy": {
         "description": null,
         "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/Organization"
+            "https://openminds.ebrains.eu/core/Organization"
         ],
         "name": "Hosted by",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/fileRepository"
+            "core/schemas/data/fileRepository"
         ]
     },
     "howToCite": {
@@ -841,23 +953,22 @@
         "name": "How to cite",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/digitalIdentifier"
+            "core/schemas/miscellaneous/digitalIdentifier"
         ]
     },
     "ianaRef": {
+        "deprecated": true,
         "description": null,
         "name": "Iana ref",
         "sameAs": null,
-        "schemas": [
-            "core/v3/data/contentType"
-        ]
+        "schemas": []
     },
     "identifier": {
         "description": null,
         "name": "Identifier",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/digitalIdentifier"
+            "core/schemas/miscellaneous/digitalIdentifier"
         ]
     },
     "identifierPattern": {
@@ -865,7 +976,7 @@
         "name": "Identifier pattern",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/digitalIdentifierSchema"
+            "core/schemas/miscellaneous/digitalIdentifierSchema"
         ]
     },
     "identifierSchema": {
@@ -876,7 +987,7 @@
         "name": "Identifier schema",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/digitalIdentifier"
+            "core/schemas/miscellaneous/digitalIdentifier"
         ]
     },
     "inRelationTo": {
@@ -887,7 +998,7 @@
         "name": "In relation to",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/anatomicalEntityRelation"
+            "SANDS/schemas/anatomicalEntityRelation"
         ]
     },
     "input": {
@@ -902,19 +1013,25 @@
         ],
         "name": "Input",
         "schemas": [
-            "core/v3/research/protocolExecution"
+            "core/schemas/research/protocolExecution"
+        ]
+    },
+    "inputData": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/core/DigitalIdentifier"
+        ],
+        "name": "Input data",
+        "schemas": [
+            "core/schemas/products/modelVersion"
         ]
     },
     "inputDataset": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/DatasetVersion"
-        ],
         "name": "Input dataset",
         "sameAs": null,
-        "schemas": [
-            "core/v3/products/modelVersion"
-        ]
+        "schemas": []
     },
     "inputFormat": {
         "description": null,
@@ -924,7 +1041,7 @@
         "name": "Input format",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
         ]
     },
     "inspiredBy": {
@@ -935,29 +1052,29 @@
         "name": "Inspired by",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/annotation"
+            "SANDS/schemas/annotation"
         ]
     },
     "internalFileIdentifier": {
+        "deprecated": true,
         "description": null,
         "name": "Internal file identifier",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/annotation"
-        ]
+        "schemas": []
     },
     "internalIdentifier": {
         "description": null,
         "name": "Internal identifier",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/electrode",
-            "SANDS/v1/electrodeArray",
-            "SANDS/v1/electrodeContact",
-            "core/v3/research/subject",
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "SANDS/schemas/annotation",
+            "SANDS/schemas/electrode",
+            "SANDS/schemas/electrodeArray",
+            "SANDS/schemas/electrodeContact",
+            "core/schemas/research/subject",
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "isNewVersionOf": {
@@ -966,15 +1083,17 @@
             "https://openminds.ebrains.eu/core/DatasetVersion",
             "https://openminds.ebrains.eu/core/MetaDataModelVersion",
             "https://openminds.ebrains.eu/core/ModelVersion",
-            "https://openminds.ebrains.eu/core/SoftwareVersion"
+            "https://openminds.ebrains.eu/core/SoftwareVersion",
+            "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
         ],
         "name": "Is new version of",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/brainAtlasVersion",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "isPartOf": {
@@ -986,8 +1105,8 @@
         "name": "Is part of",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/fileBundle",
-            "core/v3/data/fileInstance"
+            "core/schemas/data/fileBundle",
+            "core/schemas/data/fileInstance"
         ]
     },
     "isSupplementTo": {
@@ -1011,15 +1130,21 @@
         "sameAs": null,
         "schemas": []
     },
+    "keyword": {
+        "description": null,
+        "name": "Keyword",
+        "schemas": [
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
+        ]
+    },
     "keywords": {
+        "deprecated": true,
         "description": null,
         "name": "Keywords",
-        "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
-        ]
+        "schemas": []
     },
     "language": {
         "description": null,
@@ -1029,7 +1154,7 @@
         "name": "Language",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
         ]
     },
     "laterality": {
@@ -1040,7 +1165,9 @@
         "name": "Laterality",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/annotation"
+            "SANDS/schemas/annotation",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "legalCode": {
@@ -1048,7 +1175,7 @@
         "name": "Legal code",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/license"
+            "core/schemas/data/license"
         ]
     },
     "license": {
@@ -1059,10 +1186,10 @@
         "name": "License",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "maxValue": {
@@ -1071,7 +1198,7 @@
         "name": "Max value",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/quantitativeValueRange"
+            "core/schemas/miscellaneous/quantitativeValueRange"
         ]
     },
     "minValue": {
@@ -1080,7 +1207,7 @@
         "name": "Min value",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/quantitativeValueRange"
+            "core/schemas/miscellaneous/quantitativeValueRange"
         ]
     },
     "modality": {
@@ -1091,7 +1218,7 @@
         "name": "Modality",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/datasetVersion"
+            "core/schemas/products/datasetVersion"
         ]
     },
     "modelFormat": {
@@ -1106,58 +1233,59 @@
         "name": "Name",
         "sameAs": null,
         "schemas": [
-            "controlledTerms/v1.0/ageCategory",
-            "controlledTerms/v1.0/anatomicalAxesOrientation",
-            "controlledTerms/v1.0/behavioralTask",
-            "controlledTerms/v1.0/biologicalSex",
-            "controlledTerms/v1.0/confidence",
-            "controlledTerms/v1.0/contributionType",
-            "controlledTerms/v1.0/criteriaQualityType",
-            "controlledTerms/v1.0/datasetType",
-            "controlledTerms/v1.0/disease",
-            "controlledTerms/v1.0/diseaseModel",
-            "controlledTerms/v1.0/ethicsAssessment",
-            "controlledTerms/v1.0/fileBundleGrouping",
-            "controlledTerms/v1.0/fileUsageRole",
-            "controlledTerms/v1.0/genotype",
-            "controlledTerms/v1.0/language",
-            "controlledTerms/v1.0/laterality",
-            "controlledTerms/v1.0/modality",
-            "controlledTerms/v1.0/modelAbstractionLevel",
-            "controlledTerms/v1.0/modelScope",
-            "controlledTerms/v1.0/operatingDevice",
-            "controlledTerms/v1.0/operatingSystem",
-            "controlledTerms/v1.0/organOfOrigin",
-            "controlledTerms/v1.0/pathology",
-            "controlledTerms/v1.0/phenotype",
-            "controlledTerms/v1.0/productAvailability",
-            "controlledTerms/v1.0/programmingLanguage",
-            "controlledTerms/v1.0/repositoryHost",
-            "controlledTerms/v1.0/semanticRelation",
-            "controlledTerms/v1.0/softwareApplicationCategory",
-            "controlledTerms/v1.0/softwareFeatureCategory",
-            "controlledTerms/v1.0/species",
-            "controlledTerms/v1.0/technique",
-            "controlledTerms/v1.0/termSuggestion",
-            "controlledTerms/v1.0/terminology",
-            "controlledTerms/v1.0/tissueSampleType",
-            "controlledTerms/v1.0/unitOfMeasurement",
-            "core/v3/data/contentType",
-            "core/v3/data/fileBundle",
-            "core/v3/data/fileInstance",
-            "core/v3/data/fileRepository",
-            "core/v3/products/softwareFeature",
-            "core/v3/research/parameterSetting",
-            "core/v3/research/protocol"
+            "SANDS/schemas/anatomicalEntity",
+            "controlledTerms/schemas/ageCategory",
+            "controlledTerms/schemas/anatomicalAxesOrientation",
+            "controlledTerms/schemas/behavioralTask",
+            "controlledTerms/schemas/biologicalSex",
+            "controlledTerms/schemas/cellType",
+            "controlledTerms/schemas/contributionType",
+            "controlledTerms/schemas/criteriaQualityType",
+            "controlledTerms/schemas/datasetType",
+            "controlledTerms/schemas/disease",
+            "controlledTerms/schemas/diseaseModel",
+            "controlledTerms/schemas/ethicsAssessment",
+            "controlledTerms/schemas/fileBundleGrouping",
+            "controlledTerms/schemas/fileUsageRole",
+            "controlledTerms/schemas/genotype",
+            "controlledTerms/schemas/language",
+            "controlledTerms/schemas/laterality",
+            "controlledTerms/schemas/metaDataModelType",
+            "controlledTerms/schemas/modality",
+            "controlledTerms/schemas/modelAbstractionLevel",
+            "controlledTerms/schemas/modelScope",
+            "controlledTerms/schemas/operatingDevice",
+            "controlledTerms/schemas/operatingSystem",
+            "controlledTerms/schemas/organ",
+            "controlledTerms/schemas/phenotype",
+            "controlledTerms/schemas/preparationType",
+            "controlledTerms/schemas/productAccessibility",
+            "controlledTerms/schemas/programmingLanguage",
+            "controlledTerms/schemas/qualitativeOverlap",
+            "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeatureCategory",
+            "controlledTerms/schemas/species",
+            "controlledTerms/schemas/strain",
+            "controlledTerms/schemas/technique",
+            "controlledTerms/schemas/termSuggestion",
+            "controlledTerms/schemas/terminology",
+            "controlledTerms/schemas/tissueSampleType",
+            "controlledTerms/schemas/unitOfMeasurement",
+            "core/schemas/data/contentType",
+            "core/schemas/data/fileBundle",
+            "core/schemas/data/fileInstance",
+            "core/schemas/data/fileRepository",
+            "core/schemas/products/softwareFeature",
+            "core/schemas/research/parameterSetting",
+            "core/schemas/research/protocol"
         ]
     },
     "nameOfLocation": {
+        "deprecated": true,
         "description": null,
         "name": "Name of location",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/anatomicalEntity"
-        ]
+        "schemas": []
     },
     "namingTerm": {
         "description": null,
@@ -1167,7 +1295,7 @@
         "name": "Naming term",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/annotation"
+            "SANDS/schemas/annotation"
         ]
     },
     "nativeUnit": {
@@ -1178,65 +1306,62 @@
         "name": "Native unit",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/coordinateSpace"
+            "SANDS/schemas/coordinateSpace"
         ]
     },
     "newVersionOf": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-        ],
         "name": "New version of",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/brainAtlasVersion"
-        ]
+        "schemas": []
     },
     "ontologyIdentifier": {
         "description": null,
         "name": "Ontology identifier",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/anatomicalEntity",
-            "SANDS/v1/atlasTerminology",
-            "SANDS/v1/brainAtlasVersion",
-            "SANDS/v1/coordinateSpace",
-            "controlledTerms/v1.0/ageCategory",
-            "controlledTerms/v1.0/anatomicalAxesOrientation",
-            "controlledTerms/v1.0/behavioralTask",
-            "controlledTerms/v1.0/biologicalSex",
-            "controlledTerms/v1.0/confidence",
-            "controlledTerms/v1.0/contributionType",
-            "controlledTerms/v1.0/criteriaQualityType",
-            "controlledTerms/v1.0/datasetType",
-            "controlledTerms/v1.0/disease",
-            "controlledTerms/v1.0/diseaseModel",
-            "controlledTerms/v1.0/ethicsAssessment",
-            "controlledTerms/v1.0/fileBundleGrouping",
-            "controlledTerms/v1.0/fileUsageRole",
-            "controlledTerms/v1.0/genotype",
-            "controlledTerms/v1.0/language",
-            "controlledTerms/v1.0/laterality",
-            "controlledTerms/v1.0/modality",
-            "controlledTerms/v1.0/modelAbstractionLevel",
-            "controlledTerms/v1.0/modelScope",
-            "controlledTerms/v1.0/operatingDevice",
-            "controlledTerms/v1.0/operatingSystem",
-            "controlledTerms/v1.0/organOfOrigin",
-            "controlledTerms/v1.0/pathology",
-            "controlledTerms/v1.0/phenotype",
-            "controlledTerms/v1.0/productAvailability",
-            "controlledTerms/v1.0/programmingLanguage",
-            "controlledTerms/v1.0/repositoryHost",
-            "controlledTerms/v1.0/semanticRelation",
-            "controlledTerms/v1.0/softwareApplicationCategory",
-            "controlledTerms/v1.0/softwareFeatureCategory",
-            "controlledTerms/v1.0/species",
-            "controlledTerms/v1.0/technique",
-            "controlledTerms/v1.0/termSuggestion",
-            "controlledTerms/v1.0/terminology",
-            "controlledTerms/v1.0/tissueSampleType",
-            "controlledTerms/v1.0/unitOfMeasurement"
+            "SANDS/schemas/anatomicalEntity",
+            "SANDS/schemas/atlasTerminology",
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinateSpace",
+            "controlledTerms/schemas/ageCategory",
+            "controlledTerms/schemas/anatomicalAxesOrientation",
+            "controlledTerms/schemas/behavioralTask",
+            "controlledTerms/schemas/biologicalSex",
+            "controlledTerms/schemas/cellType",
+            "controlledTerms/schemas/contributionType",
+            "controlledTerms/schemas/criteriaQualityType",
+            "controlledTerms/schemas/datasetType",
+            "controlledTerms/schemas/disease",
+            "controlledTerms/schemas/diseaseModel",
+            "controlledTerms/schemas/ethicsAssessment",
+            "controlledTerms/schemas/fileBundleGrouping",
+            "controlledTerms/schemas/fileUsageRole",
+            "controlledTerms/schemas/genotype",
+            "controlledTerms/schemas/language",
+            "controlledTerms/schemas/laterality",
+            "controlledTerms/schemas/metaDataModelType",
+            "controlledTerms/schemas/modality",
+            "controlledTerms/schemas/modelAbstractionLevel",
+            "controlledTerms/schemas/modelScope",
+            "controlledTerms/schemas/operatingDevice",
+            "controlledTerms/schemas/operatingSystem",
+            "controlledTerms/schemas/organ",
+            "controlledTerms/schemas/phenotype",
+            "controlledTerms/schemas/preparationType",
+            "controlledTerms/schemas/productAccessibility",
+            "controlledTerms/schemas/programmingLanguage",
+            "controlledTerms/schemas/qualitativeOverlap",
+            "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeatureCategory",
+            "controlledTerms/schemas/species",
+            "controlledTerms/schemas/strain",
+            "controlledTerms/schemas/technique",
+            "controlledTerms/schemas/termSuggestion",
+            "controlledTerms/schemas/terminology",
+            "controlledTerms/schemas/tissueSampleType",
+            "controlledTerms/schemas/unitOfMeasurement"
         ]
     },
     "operatingSystem": {
@@ -1247,7 +1372,7 @@
         "name": "Operating system",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
         ]
     },
     "organOfOrigin": {
@@ -1261,40 +1386,50 @@
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/controlledTerms/CellType",
-            "https://openminds.ebrains.eu/controlledTerms/Organ",
-            "https://openminds.ebrains.eu/core/QuantitativeValue"
+            "https://openminds.ebrains.eu/controlledTerms/Organ"
         ],
         "name": "Origin",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/coordinateSpace",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
-    "otherAnatomicalRelations": {
+    "otherAnatomicalRelation": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"
         ],
-        "name": "Other anatomical relations",
-        "sameAs": null,
+        "name": "Other anatomical relation",
         "schemas": [
-            "SANDS/v1/anatomicalEntity"
+            "SANDS/schemas/anatomicalEntity"
         ]
     },
-    "otherContributions": {
+    "otherAnatomicalRelations": {
+        "deprecated": true,
+        "description": null,
+        "name": "Other anatomical relations",
+        "sameAs": null,
+        "schemas": []
+    },
+    "otherContribution": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/Contribution"
         ],
-        "name": "Other contributions",
+        "name": "Other contribution",
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
+    },
+    "otherContributions": {
+        "deprecated": true,
+        "description": null,
+        "name": "Other contributions",
+        "schemas": []
     },
     "output": {
         "description": null,
@@ -1308,18 +1443,24 @@
         ],
         "name": "Output",
         "schemas": [
-            "core/v3/research/protocolExecution"
+            "core/schemas/research/protocolExecution"
+        ]
+    },
+    "outputData": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/core/DigitalIdentifier"
+        ],
+        "name": "Output data",
+        "schemas": [
+            "core/schemas/products/modelVersion"
         ]
     },
     "outputDataset": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/DatasetVersion"
-        ],
         "name": "Output dataset",
-        "schemas": [
-            "core/v3/products/modelVersion"
-        ]
+        "schemas": []
     },
     "outputFormat": {
         "description": null,
@@ -1329,41 +1470,39 @@
         "name": "Output format",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
         ]
     },
-    "parameterSettings": {
+    "parameterSetting": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/ParameterSetting"
         ],
+        "name": "Parameter setting",
+        "schemas": [
+            "core/schemas/research/protocolExecution"
+        ]
+    },
+    "parameterSettings": {
+        "deprecated": true,
+        "description": null,
         "name": "Parameter settings",
         "sameAs": null,
-        "schemas": [
-            "core/v3/research/protocolExecution"
-        ]
+        "schemas": []
     },
     "parentOrganization": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/Organization"
-        ],
         "name": "Parent organization",
         "sameAs": null,
-        "schemas": [
-            "core/v3/actors/organization"
-        ]
+        "schemas": []
     },
     "parentStructure": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/sands/AnatomicalEntity"
-        ],
         "name": "Parent structure",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/anatomicalEntity"
-        ]
+        "schemas": []
     },
     "pathology": {
         "description": null,
@@ -1374,23 +1513,18 @@
         "name": "Pathology",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subjectGroupState",
-            "core/v3/research/subjectState",
-            "core/v3/research/tissueSampleCollectionState",
-            "core/v3/research/tissueSampleState"
+            "core/schemas/research/subjectGroupState",
+            "core/schemas/research/subjectState",
+            "core/schemas/research/tissueSampleCollectionState",
+            "core/schemas/research/tissueSampleState"
         ]
     },
     "percentalOverlap": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/QuantitativeValue",
-            "https://openminds.ebrains.eu/core/QuantitativeValueRange"
-        ],
         "name": "Percental overlap",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/anatomicalEntityRelation"
-        ]
+        "schemas": []
     },
     "phenotype": {
         "description": null,
@@ -1400,20 +1534,26 @@
         "name": "Phenotype",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subject",
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/subject",
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "preparationCategory": {
+        "deprecated": true,
+        "description": null,
+        "name": "Preparation category",
+        "schemas": []
+    },
+    "preparationType": {
         "description": null,
         "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/PreparationCategory"
+            "https://openminds.ebrains.eu/controlledTerms/PreparationType"
         ],
-        "name": "Preparation category",
+        "name": "Preparation type",
         "schemas": [
-            "core/v3/research/protocolExecution"
+            "core/schemas/research/protocolExecution"
         ]
     },
     "programmingLanguage": {
@@ -1424,7 +1564,7 @@
         "name": "Programming language",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/softwareVersion"
         ]
     },
     "projectLeader": {
@@ -1435,7 +1575,7 @@
         ],
         "name": "Project leader",
         "schemas": [
-            "core/v3/products/project"
+            "core/schemas/products/project"
         ]
     },
     "protocol": {
@@ -1446,7 +1586,17 @@
         "name": "Protocol",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/protocolExecution"
+            "core/schemas/research/protocolExecution"
+        ]
+    },
+    "qualitativeOverlap": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"
+        ],
+        "name": "Qualitative overlap",
+        "schemas": [
+            "SANDS/schemas/anatomicalEntityRelation"
         ]
     },
     "quality": {
@@ -1456,13 +1606,20 @@
         "sameAs": null,
         "schemas": []
     },
+    "quantitativeOverlap": {
+        "description": null,
+        "name": "Quantitative overlap",
+        "schemas": [
+            "SANDS/schemas/anatomicalEntityRelation"
+        ]
+    },
     "quantity": {
         "description": null,
         "name": "Quantity",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "relatedAtlasTerm": {
@@ -1473,66 +1630,87 @@
         "name": "Related atlas term",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/annotation"
+            "SANDS/schemas/annotation"
         ]
     },
-    "relatedPublications": {
+    "relatedMediaType": {
+        "description": null,
+        "name": "Related media type",
+        "schemas": [
+            "core/schemas/data/contentType"
+        ]
+    },
+    "relatedPublication": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/DigitalIdentifier"
         ],
+        "name": "Related publication",
+        "schemas": [
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
+        ]
+    },
+    "relatedPublications": {
+        "deprecated": true,
+        "description": null,
         "name": "Related publications",
         "sameAs": null,
+        "schemas": []
+    },
+    "relatedRecording": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/core/FileInstance"
+        ],
+        "name": "Related recording",
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/electrodeContact"
         ]
     },
     "relatedRecordings": {
+        "deprecated": true,
+        "description": null,
+        "name": "Related recordings",
+        "sameAs": null,
+        "schemas": []
+    },
+    "relatedStimulation": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/FileInstance"
         ],
-        "name": "Related recordings",
-        "sameAs": null,
+        "name": "Related stimulation",
         "schemas": [
-            "SANDS/v1/electrodeContact"
+            "SANDS/schemas/electrodeContact"
         ]
     },
     "relatedStimulations": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/FileInstance"
-        ],
         "name": "Related stimulations",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/electrodeContact"
-        ]
+        "schemas": []
     },
     "relatedTerminology": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/Terminology"
-        ],
         "name": "Related terminology",
-        "schemas": [
-            "controlledTerms/v1.0/termSuggestion"
-        ]
+        "schemas": []
     },
     "releaseDate": {
         "description": null,
         "name": "Release date",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/brainAtlasVersion",
-            "SANDS/v1/coordinateSpace",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinateSpace",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "relevantFor": {
@@ -1543,7 +1721,7 @@
         ],
         "name": "Relevant for",
         "schemas": [
-            "core/v3/research/parameterSetting"
+            "core/schemas/research/parameterSetting"
         ]
     },
     "relevantParameterFor": {
@@ -1561,21 +1739,18 @@
         "name": "Repository",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "resourceLocator": {
+        "deprecated": true,
         "description": null,
         "name": "Resource locator",
         "sameAs": null,
-        "schemas": [
-            "core/v3/data/fileBundle",
-            "core/v3/data/fileInstance",
-            "core/v3/data/fileRepository"
-        ]
+        "schemas": []
     },
     "schemaUri": {
         "deprecated": true,
@@ -1592,19 +1767,15 @@
         "name": "Scope",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/modelVersion"
+            "core/schemas/products/modelVersion"
         ]
     },
     "semanticRelation": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/SemanticRelation"
-        ],
         "name": "Semantic relation",
         "sameAs": null,
-        "schemas": [
-            "SANDS/v1/anatomicalEntityRelation"
-        ]
+        "schemas": []
     },
     "semanticallyAnchoredTo": {
         "description": null,
@@ -1614,58 +1785,69 @@
         "name": "Semantically anchored to",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/protocolExecution"
+            "core/schemas/research/protocolExecution"
         ]
     },
-    "serializationFormats": {
+    "serializationFormat": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/ContentType"
         ],
-        "name": "Serialization formats",
+        "name": "Serialization format",
         "schemas": [
-            "core/v3/products/metaDataModelVersion"
+            "core/schemas/products/metaDataModelVersion"
         ]
+    },
+    "serializationFormats": {
+        "deprecated": true,
+        "description": null,
+        "name": "Serialization formats",
+        "schemas": []
     },
     "shortName": {
         "description": null,
         "name": "Short name",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/atlasTerminology",
-            "SANDS/v1/brainAtlas",
-            "SANDS/v1/brainAtlasVersion",
-            "SANDS/v1/coordinateSpace",
-            "core/v3/actors/organization",
-            "core/v3/data/license",
-            "core/v3/products/dataset",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModel",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/model",
-            "core/v3/products/modelVersion",
-            "core/v3/products/project",
-            "core/v3/products/software",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/atlasTerminology",
+            "SANDS/schemas/brainAtlas",
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinateSpace",
+            "core/schemas/actors/organization",
+            "core/schemas/data/license",
+            "core/schemas/products/dataset",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModel",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/model",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/project",
+            "core/schemas/products/software",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "softwareFeature": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"
-        ],
         "name": "Software feature",
         "sameAs": null,
-        "schemas": [
-            "core/v3/products/softwareVersion"
-        ]
+        "schemas": []
     },
     "softwareRequirement": {
+        "deprecated": true,
         "description": null,
         "name": "Software requirement",
         "sameAs": null,
+        "schemas": []
+    },
+    "specialUsageRole": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/controlledTerms/fileUsageRole"
+        ],
+        "name": "Special usage role",
         "schemas": [
-            "core/v3/products/softwareVersion"
+            "core/schemas/data/fileInstance"
         ]
     },
     "species": {
@@ -1676,10 +1858,10 @@
         "name": "Species",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subject",
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/subject",
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "specificRole": {
@@ -1690,36 +1872,35 @@
         "schemas": []
     },
     "specificUsageRole": {
+        "deprecated": true,
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/fileUsageRole"
-        ],
         "name": "Specific usage role",
-        "schemas": [
-            "core/v3/data/fileInstance"
-        ]
+        "schemas": []
     },
-    "specificationFormats": {
+    "specificationFormat": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/ContentType"
         ],
-        "name": "Specification formats",
+        "name": "Specification format",
         "schemas": [
-            "core/v3/products/metaDataModelVersion"
+            "core/schemas/products/metaDataModelVersion"
         ]
+    },
+    "specificationFormats": {
+        "deprecated": true,
+        "description": null,
+        "name": "Specification formats",
+        "schemas": []
     },
     "storageSize": {
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/QuantitativeValue"
-        ],
         "name": "Storage size",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/fileBundle",
-            "core/v3/data/fileInstance",
-            "core/v3/data/fileRepository"
+            "core/schemas/data/fileBundle",
+            "core/schemas/data/fileInstance",
+            "core/schemas/data/fileRepository"
         ]
     },
     "strain": {
@@ -1730,13 +1911,13 @@
         "name": "Strain",
         "sameAs": null,
         "schemas": [
-            "core/v3/research/subject",
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/subject",
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
-    "studiedStates": {
+    "studiedState": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/core/SubjectGroupState",
@@ -1744,23 +1925,23 @@
             "https://openminds.ebrains.eu/core/TissueSampleCollectionState",
             "https://openminds.ebrains.eu/core/TissueSampleState"
         ],
-        "name": "Studied states",
-        "sameAs": null,
+        "name": "Studied state",
         "schemas": [
-            "core/v3/research/subject",
-            "core/v3/research/subjectGroup",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/research/subject",
+            "core/schemas/research/subjectGroup",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
-    "studyTarget": {
+    "studiedStates": {
         "deprecated": true,
         "description": null,
-        "name": "Study target",
+        "name": "Studied states",
         "sameAs": null,
         "schemas": []
     },
-    "studyTargets": {
+    "studyTarget": {
+        "deprecated": true,
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/controlledTerm/BiologicalSex",
@@ -1775,15 +1956,22 @@
             "https://openminds.ebrains.eu/controlledTerms/Phenotype",
             "https://openminds.ebrains.eu/controlledTerms/Species",
             "https://openminds.ebrains.eu/controlledTerms/TermSuggestion",
-            "https://openminds.ebrains.eu/sands/anatomicalEntity"
+            "https://openminds.ebrains.eu/sands/AnatomicalEntity"
         ],
-        "name": "Study targets",
+        "name": "Study target",
         "sameAs": null,
         "schemas": [
-            "core/v3/products/modelVersion",
-            "core/v3/research/protocol",
-            "core/v3/research/protocolExecution"
+            "core/schemas/products/modelVersion",
+            "core/schemas/research/protocol",
+            "core/schemas/research/protocolExecution"
         ]
+    },
+    "studyTargets": {
+        "deprecated": true,
+        "description": null,
+        "name": "Study targets",
+        "sameAs": null,
+        "schemas": []
     },
     "summary": {
         "deprecated": true,
@@ -1792,34 +1980,48 @@
         "sameAs": null,
         "schemas": []
     },
+    "synonym": {
+        "description": null,
+        "name": "Synonym",
+        "schemas": [
+            "core/schemas/data/contentType"
+        ]
+    },
     "synonyms": {
+        "deprecated": true,
         "description": null,
         "name": "Synonyms",
         "sameAs": null,
-        "schemas": [
-            "core/v3/data/contentType"
-        ]
+        "schemas": []
     },
-    "techniques": {
+    "technique": {
         "description": null,
         "linkedTypes": [
             "https://openminds.ebrains.eu/controlledTerms/Technique"
         ],
+        "name": "Technique",
+        "schemas": [
+            "core/schemas/research/protocol"
+        ]
+    },
+    "techniques": {
+        "deprecated": true,
+        "description": null,
         "name": "Techniques",
         "sameAs": null,
-        "schemas": [
-            "core/v3/research/protocol"
-        ]
+        "schemas": []
     },
     "terminology": {
         "description": null,
         "linkedTypes": [
+            "https://openminds.ebrains.eu/controlledTerms/Terminology",
             "https://openminds.ebrains.eu/sands/AtlasTerminology"
         ],
         "name": "Terminology",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/brainAtlasVersion"
+            "SANDS/schemas/brainAtlasVersion",
+            "controlledTerms/schemas/termSuggestion"
         ]
     },
     "thingOfInterest": {
@@ -1846,31 +2048,30 @@
         "name": "Type",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/digitalIdentifierSchema",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/research/tissueSample",
-            "core/v3/research/tissueSampleCollection"
+            "core/schemas/miscellaneous/digitalIdentifierSchema",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/research/tissueSample",
+            "core/schemas/research/tissueSampleCollection"
         ]
     },
     "uncertainty": {
         "description": null,
         "name": "Uncertainty",
         "schemas": [
-            "core/v3/miscellaneous/quantitativeValue"
+            "core/schemas/miscellaneous/quantitativeValue"
         ]
     },
     "unit": {
         "description": null,
         "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/Unit",
             "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
         ],
         "name": "Unit",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/quantitativeValue",
-            "core/v3/research/parameterSetting"
+            "core/schemas/miscellaneous/quantitativeValue",
+            "core/schemas/research/parameterSetting"
         ]
     },
     "unitOfMeasurement": {
@@ -1884,8 +2085,8 @@
         "name": "Value",
         "sameAs": null,
         "schemas": [
-            "core/v3/miscellaneous/quantitativeValue",
-            "core/v3/research/parameterSetting"
+            "core/schemas/miscellaneous/quantitativeValue",
+            "core/schemas/research/parameterSetting"
         ]
     },
     "valueUnit": {
@@ -1900,12 +2101,12 @@
         "name": "Version identifier",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/brainAtlasVersion",
-            "SANDS/v1/coordinateSpace",
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
+            "SANDS/schemas/brainAtlasVersion",
+            "SANDS/schemas/coordinateSpace",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "versionInnovation": {
@@ -1913,19 +2114,19 @@
         "name": "Version innovation",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/brainAtlasVersion"
+            "SANDS/schemas/brainAtlasVersion",
+            "core/schemas/products/datasetVersion",
+            "core/schemas/products/metaDataModelVersion",
+            "core/schemas/products/modelVersion",
+            "core/schemas/products/softwareVersion"
         ]
     },
     "versionInnovations": {
+        "deprecated": true,
         "description": null,
         "name": "Version innovations",
         "sameAs": null,
-        "schemas": [
-            "core/v3/products/datasetVersion",
-            "core/v3/products/metaDataModelVersion",
-            "core/v3/products/modelVersion",
-            "core/v3/products/softwareVersion"
-        ]
+        "schemas": []
     },
     "visualizedIn": {
         "description": null,
@@ -1935,29 +2136,26 @@
         "name": "Visualized in",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/annotation",
-            "SANDS/v1/electrodeContact"
+            "SANDS/schemas/annotation",
+            "SANDS/schemas/electrodeContact"
         ]
     },
     "voxelSize": {
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/core/QuantitativeValue"
-        ],
         "name": "Voxel size",
         "sameAs": null,
         "schemas": [
-            "SANDS/v1/image"
+            "SANDS/schemas/image"
         ]
     },
     "weight": {
         "description": null,
         "name": "Weight",
         "schemas": [
-            "core/v3/research/subjectGroupState",
-            "core/v3/research/subjectState",
-            "core/v3/research/tissueSampleCollectionState",
-            "core/v3/research/tissueSampleState"
+            "core/schemas/research/subjectGroupState",
+            "core/schemas/research/subjectState",
+            "core/schemas/research/tissueSampleCollectionState",
+            "core/schemas/research/tissueSampleState"
         ]
     },
     "year": {
@@ -1965,7 +2163,7 @@
         "name": "Year",
         "sameAs": null,
         "schemas": [
-            "core/v3/data/copyright"
+            "core/schemas/data/copyright"
         ]
     }
 }
