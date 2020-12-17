@@ -239,14 +239,20 @@
     },
     "category": {
         "description": null,
-        "linkedTypes": [
-            "https://openminds.ebrains.eu/controlledTerms/SoftwareFeatureCategory"
-        ],
         "name": "Category",
         "sameAs": null,
         "schemas": [
-            "core/schemas/data/contentType",
-            "core/schemas/products/softwareFeature"
+            "core/schemas/data/contentType"
+        ]
+    },
+    "contactInformation": {
+        "description": null,
+        "linkedTypes": [
+            "https://openminds.ebrains.eu/core/ContactInformation"
+        ],
+        "name": "Contact information",
+        "schemas": [
+            "core/schemas/actors/person"
         ]
     },
     "contactPoint": {
@@ -452,6 +458,7 @@
             "controlledTerms/schemas/programmingLanguage",
             "controlledTerms/schemas/qualitativeOverlap",
             "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeature",
             "controlledTerms/schemas/softwareFeatureCategory",
             "controlledTerms/schemas/species",
             "controlledTerms/schemas/strain",
@@ -463,11 +470,10 @@
         ]
     },
     "definitionReference": {
+        "deprecated": true,
         "description": null,
         "name": "Definition reference",
-        "schemas": [
-            "core/schemas/products/softwareFeature"
-        ]
+        "schemas": []
     },
     "description": {
         "description": null,
@@ -504,6 +510,7 @@
             "controlledTerms/schemas/programmingLanguage",
             "controlledTerms/schemas/qualitativeOverlap",
             "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeature",
             "controlledTerms/schemas/softwareFeatureCategory",
             "controlledTerms/schemas/species",
             "controlledTerms/schemas/strain",
@@ -520,7 +527,6 @@
             "core/schemas/products/modelVersion",
             "core/schemas/products/project",
             "core/schemas/products/software",
-            "core/schemas/products/softwareFeature",
             "core/schemas/products/softwareVersion",
             "core/schemas/research/parameterSetting",
             "core/schemas/research/protocol",
@@ -637,7 +643,7 @@
         "name": "Email",
         "sameAs": null,
         "schemas": [
-            "core/schemas/actors/person"
+            "core/schemas/actors/contactInformation"
         ]
     },
     "ethicsAssessment": {
@@ -802,7 +808,7 @@
     "hasFeature": {
         "description": null,
         "linkedTypes": [
-            "https://openminds.ebrains.eu/core/SoftwareFeature"
+            "https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"
         ],
         "name": "Has feature",
         "schemas": [
@@ -1263,6 +1269,7 @@
             "controlledTerms/schemas/programmingLanguage",
             "controlledTerms/schemas/qualitativeOverlap",
             "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeature",
             "controlledTerms/schemas/softwareFeatureCategory",
             "controlledTerms/schemas/species",
             "controlledTerms/schemas/strain",
@@ -1275,7 +1282,6 @@
             "core/schemas/data/fileBundle",
             "core/schemas/data/fileInstance",
             "core/schemas/data/fileRepository",
-            "core/schemas/products/softwareFeature",
             "core/schemas/research/parameterSetting",
             "core/schemas/research/protocol"
         ]
@@ -1354,6 +1360,7 @@
             "controlledTerms/schemas/programmingLanguage",
             "controlledTerms/schemas/qualitativeOverlap",
             "controlledTerms/schemas/softwareApplicationCategory",
+            "controlledTerms/schemas/softwareFeature",
             "controlledTerms/schemas/softwareFeatureCategory",
             "controlledTerms/schemas/species",
             "controlledTerms/schemas/strain",
